@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/favicon.png" type= "image/x-icon" />
+    <link rel="stylesheet" href="карточки.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="Explore.css"/>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
     <title>Museum</title>
 </head>
 
@@ -15,42 +17,141 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-            <img src="logo.svg" alt="Логотип">
+                <img src="Vector.svg" alt="Louvre Museum">
+                <span class="logo-text">LOUVRE</span>
             </div>
             <nav class="navigation">
-             <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Visiting</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Explore</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Video</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Tickets</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#visiting" class="nav-link">Visiting</a></li>
+                    <li class="nav-item"><a href="#explore" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#tickets" class="nav-link">Tickets</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="main">
-        <section class="section light-section">
-            <div class="container"></div>
-        </section>
-        <section class="section dark-section">
-            <div class="container"></div>
-        </section>
-        <section class="section dark-section video-section">
-            <div class="container"></div>
-        </section>
-        <section class="section light-section"> 
-            <div class="container"></div>
-        </section>
-        <section class="section dark-section features-section">
-            <div class="container"></div>
-        </section>
-        <section class="section light-section contact-section">
-            <div class="container"></div>
-        </section>
-    </main>
-    <footer><div class="container"></div>
-    </footer>
     
+    <main class="main">
+        <section class="section welcome-section dark-section">
+            <div class="container">
+                <div class="welcome-content">
+                    <h1 class="section-title welcome-title">Welcome to the Louvre</h1>
+                    <p class="welcome-text">From the castle to the museum</p>
+                    <button class="welcome-button">Discover the Louvre</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section light-section visiting-section" id="visiting">
+            <div class="container">
+                <h2 class="section-title visiting-title underline-title">VIRTUAL TOUR</h2>
+                
+                <div class="cards-container">
+                    <!-- Карточка 1 -->
+                    <a href="#" class="card">
+                        <img src="images/card-1.jpg" alt="ROYAL PALACE" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">ROYAL PALACE</h3>
+                            <p class="card-text">Explore the museum with our expert guides and discover hidden masterpieces.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Карточка 2 -->
+                    <a href="#" class="card">
+                        <img src="images/card-2.jpg" alt="DENON WING" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">DENON WING</h3>
+                            <p class="card-text">Immerse yourself in art with our cutting-edge VR experiences.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Карточка 3 -->
+                    <a href="#" class="card">
+                        <img src="images/card-3.jpg" alt="COLONNADE PERRAULT" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">COLONNADE PERRAULT</h3>
+                            <p class="card-text">Participate in creative workshops for all ages and skill levels.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Карточка 4 -->
+                    <a href="#" class="card">
+                        <img src="images/card-4.jpg" alt="GREEK HALL" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">GREEK HALL</h3>
+                            <p class="card-text">Discover temporary exhibitions featuring contemporary artists.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Карточка 5 -->
+                    <a href="#" class="card">
+                        <img src="images/card-5.jpg" alt="MONA LISA" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">MONA LISA</h3>
+                            <p class="card-text">Fun and educational activities designed for families with children.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Карточка 6 -->
+                    <a href="#" class="card">
+                        <img src="images/card-6.jpg" alt="NIGHT PALACE" class="card-image" width="350" height="200">
+                        <div class="card-content">
+                            <h3 class="card-title">NIGHT PALACE</h3>
+                            <p class="card-text">Explore at your own pace with our comprehensive audio guides.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+         <section class="section dark-section explore-section" id="explore">
+            <div class="container explore-container">
+                <!-- Блок с текстом -->
+        <div class="explore-content">
+            <h2 class="section-title explore-title underline-title">Picture explore</h2>
+            
+            <div class="explore-text">
+                <p class="explore-paragraph">
+                    Las Meninas is a 1656 painting by <span class="highlight-text">Diego Velázquez</span>, 
+                    the leading artist of the Spanish Golden Age.
+                </p>
+                
+                <p class="explore-paragraph">
+                    It was cleaned in 1984 to remove a <span class="highlight-text">yellow film</span> of 
+                    protective varnish that had darkened over the years.
+                </p>
+                
+                <p class="explore-paragraph">
+                    The painting depicts the <span class="highlight-text">Infanta Margaret Theresa</span>, 
+                    surrounded by her entourage of maids of honor, chaperone, bodyguard, two dwarfs and a dog.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Блок с изображением (будущий слайдер) -->
+        <div class="explore-image">
+            <img src="/Museum/museum/assets/img/after.jpg" alt="Las Meninas by Diego Velázquez" class="painting-image" width="600" height="700">
+        </div>
+    </div>
+        </section>
+        <section class="dark-section video-section video-section" id="video">
+            <div class="container"></div>
+        </section>
+        <section class="section light-section gallery-section" id="gallery"> 
+            <div class="container"></div>
+        </section>
+        <section class="section dark-section tickets-section" id="tickets">
+            <div class="container"></div>
+        </section>
+        <section class="section light-section contacts-section" id="contacts">
+            <div class="container"></div>
+        </section>
+        <!-- Остальные секции -->
+    </main>
+    
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
 </body>
 </html>
