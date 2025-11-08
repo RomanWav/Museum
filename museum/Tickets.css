@@ -1,0 +1,281 @@
+/* Секция Tickets */
+.tickets-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+}
+
+.tickets-title {
+    font-family: 'Forum', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #9D8665;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.tickets-container {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Форма */
+.tickets-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Строка с двумя группами форм */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+/* Компактные группы форм */
+.compact-group {
+    flex: 1;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-family: 'Forum', serif;
+    font-size: 24px;
+    color: #080500;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Radio buttons */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-input:checked + .radio-custom {
+    background: #ffffff;
+}
+
+.radio-input:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.radio-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.radio-label:hover .radio-text {
+    color: #1b55d1;
+}
+
+/* Amount controls */
+.amount-group {
+    margin-bottom: 40px;
+}
+
+.amount-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.amount-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.amount-controls-wrapper {
+    display: flex;
+    align-items: center;
+    border: 3px solid #000000;
+    border-radius: 1px;
+    padding: 0; /* Убираем внутренние отступы */
+    background: #ffffff;
+    gap: 0; /* Убираем все отступы между элементами */
+    max-width: fit-content; /* Ширина по содержимому */
+}
+
+.amount-controls {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Убираем gap, используем псевдо-элементы */
+}
+
+.amount-btn:first-child::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #ffffff;
+    margin: 0 8px;
+}
+
+.amount-input::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #ffffff;
+    margin: 0 8px;
+}
+
+.amount-btn {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    color: #000000;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.amount-btn:hover {
+    background: #f5f5f5;
+}
+
+.amount-input {
+    width: 40px;
+    height: 35px;
+    background: transparent;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid #ffffff; /* Разделитель слева */
+    border-right: 1px solid #ffffff; /* Разделитель справа */
+    -moz-appearance: textfield;
+}
+
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Total */
+
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-label {
+    font-family: 'Forum', serif;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.total-amount {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 15px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    font-family: 'Forum', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.buy-button:hover {
+    background: #f70cff;
+    transform: translateY(-2px);
+}
+
+/* Изображение */
+.tickets-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tickets-poster {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 1px;
+    margin-left: 0;
+}
+
+.full-width-image {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.tics-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}

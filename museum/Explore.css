@@ -1,0 +1,71 @@
+/* Секция Explore */
+.explore-section {
+    padding: 75px 0;
+    min-height: 200px;
+}
+
+.explore-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* или center */
+    gap: 60px;
+    max-width: 1440px;
+    margin: 0 auto; /* центрирование */
+}
+
+/* Блок с контентом */
+.explore-content {
+    flex: 0 1 700px;
+    max-width: 700px; /* хорошо */
+    order: 1;
+}
+
+.explore-title {
+    font-family: 'Forum', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #9D8665;
+    margin-bottom: 60px;
+    white-space: nowrap;
+}
+
+/* Текст секции */
+.explore-text {
+    display: flex;
+    flex-direction: column; /* вертикальное расположение параграфов */
+    gap: 40px;
+}
+
+.explore-paragraph {
+    font-family: 'Roboto', serif;
+    font-size: 22px;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.highlight-text {
+    color: #CAAA7D;
+    font-weight: 500px;
+}
+
+/* Блок с изображением */
+.explore-image {
+    flex: 0 1 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.painting-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}

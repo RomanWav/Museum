@@ -1,0 +1,68 @@
+/* Секция Contacts */
+.contacts-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+}
+
+.contacts-container {
+     display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Левая часть - контент */
+.contacts-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contacts-title {
+    font-family: 'Forum', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #9D8665;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.contacts-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contacts-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+}
+
+.contacts-paragraph strong {
+    font-weight: 500;
+    color: #9D8665;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+/* Правая часть - карта */
+.contacts-map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="карточки.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="карточки.css"/>
     <link rel="stylesheet" href="Explore.css"/>
+    <link rel="stylesheet" href="Video.css"/>
+    <link rel="stylesheet" href="Tickets.css"/>
+    <link rel="stylesheet" href="Contacts.css"/>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
     <title>Museum</title>
 </head>
@@ -37,7 +40,7 @@
         <section class="section welcome-section dark-section">
             <div class="container">
                 <div class="welcome-content">
-                    <h1 class="section-title welcome-title">Welcome to the Louvre</h1>
+                    <h1 class="section-title welcome-title">WELCOME<br>TO THE&nbsp;LOUVRE</h1>
                     <p class="welcome-text">From the castle to the museum</p>
                     <button class="welcome-button">Discover the Louvre</button>
                 </div>
@@ -106,48 +109,211 @@
             </div>
         </section>
          <section class="section dark-section explore-section" id="explore">
-            <div class="container explore-container">
-                <!-- Блок с текстом -->
-        <div class="explore-content">
-            <h2 class="section-title explore-title underline-title">Picture explore</h2>
-            
+    <div class="container">
+        <div class="explore-container">
+            <!-- Текст слева -->
+            <div class="explore-content">
+            <h2 class="section-title explore-title underline-title">PICTURE EXPLORE</h2>
             <div class="explore-text">
                 <p class="explore-paragraph">
-                    Las Meninas is a 1656 painting by <span class="highlight-text">Diego Velázquez</span>, 
-                    the leading artist of the Spanish Golden Age.
+                    Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
                 </p>
                 
                 <p class="explore-paragraph">
-                    It was cleaned in 1984 to remove a <span class="highlight-text">yellow film</span> of 
+                    It was cleaned in 1984 to remove a <span class="highlight-text">"yellow veil"</span> of 
                     protective varnish that had darkened over the years.
                 </p>
                 
                 <p class="explore-paragraph">
-                    The painting depicts the <span class="highlight-text">Infanta Margaret Theresa</span>, 
+                    The painting depicts the Infanta Margaret Theresa, 
                     surrounded by her entourage of maids of honor, chaperone, bodyguard, two dwarfs and a dog.
                 </p>
             </div>
         </div>
         
-        <!-- Блок с изображением (будущий слайдер) -->
         <div class="explore-image">
-            <img src="/Museum/museum/assets/img/after.jpg" alt="Las Meninas by Diego Velázquez" class="painting-image" width="600" height="700">
+            <img src="/Museum/museum/assets/img/after.jpg" alt="Las Meninas by Diego Velázquez" class="painting-image">
         </div>
     </div>
+    </div>
         </section>
-        <section class="dark-section video-section video-section" id="video">
-            <div class="container"></div>
-        </section>
+        <section class="dark-section light-section video-section" id="video">
+            <div class="container">
+        <h2 class="section-title video-title underline-title">VIDEO JOURNEY</h2>
+        
+        <div class="video-player">
+            <!-- Постер видео -->
+            <div class="video-poster">
+                <img src="/Museum/museum/Видео.jpg" alt="Video poster" class="poster-image">
+                <button class="play-button">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="40" fill="white" fill-opacity="0.9"/>
+                        <path d="M32 26L56 40L32 54V26Z" fill="#8B4513"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Панель управления -->
+            <div class="video-controls">
+                <!-- Прогресс-бар -->
+                <div class="progress-bar">
+                    <input type="range" class="progress-range" min="0" max="100" value="0">
+                    <div class="progress-track"></div>
+                </div>
+                
+                <!-- Нижняя панель управления -->
+                <div class="control-panel">
+                    <div class="left-controls">
+                        <button class="control-btn play-pause-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M5 3L15 10L5 17V3Z" class="play-icon"/>
+                                <rect x="5" y="3" width="4" height="14" class="pause-icon" style="display: none;"/>
+                                <rect x="11" y="3" width="4" height="14" class="pause-icon" style="display: none;"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="time-display">
+                            <span class="current-time">0:00</span> / 
+                            <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="right-controls">
+                        <button class="control-btn volume-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M12 4L7 9H2V11H7L12 16V4Z"/>
+                                <path d="M14 8C14 8 15 9 15 10C15 11 14 12 14 12" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M16 6C16 6 18 8 18 10C18 12 16 14 16 14" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="volume-control">
+                            <input type="range" class="volume-range" min="0" max="100" value="80">
+                        </div>
+                        
+                        <button class="control-btn fullscreen-btn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                                <path d="M2 7V2H7M11 2H16V7M16 11V16H11M7 16H2V11"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <section class="section light-section gallery-section" id="gallery"> 
             <div class="container"></div>
         </section>
-        <section class="section dark-section tickets-section" id="tickets">
-            <div class="container"></div>
-        </section>
+    <section class="section dark-section tickets-section" id="tickets">
+    <div class="container">
+        <h2 class="section-title tickets-title underline-title">BUY TICKETS</h2>
+        
+        <div class="tickets-container">
+            <!-- Блок с изображением -->
+            <div class="tickets-image">
+                <img src="/Museum/museum/Tickets.jpg" alt="Louvre Museum Tickets" class="tickets-poster">
+            </div>
+
+            <!-- Блок с формой -->
+            <div class="tickets-form">
+                <!-- Группа форм в одну строку -->
+                <div class="form-row">
+                    <!-- Ticket Type (уменьшенный) -->
+                    <div class="form-group compact-group">
+                        <h3 class="form-title">Ticket Type</h3>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="ticket-type" value="permanent" class="radio-input" checked>
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">Permanent exhibition</span>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="ticket-type" value="temporary" class="radio-input">
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">Temporary exhibition</span>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="ticket-type" value="combined" class="radio-input">
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">Combined Admission</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Amount и Total (теперь Amount над Total) -->
+                    <div class="form-group compact-group">
+                        <!-- Amount (теперь над Total) -->
+                        <div class="amount-group">
+                            <h3 class="form-title">Amount</h3>
+                            <div class="amount-items">
+                                <div class="amount-item">
+                                    <span class="amount-label">Basic</span>
+                                    <div class="amount-controls-wrapper">
+                                        <div class="amount-controls">
+                                            <button class="amount-btn minus-btn" type="button">-</button>
+                                            <input type="number" class="amount-input" value="0" min="0" max="10">
+                                            <button class="amount-btn plus-btn" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="amount-item">
+                                    <span class="amount-label">Senior</span>
+                                    <div class="amount-controls-wrapper">
+                                        <div class="amount-controls">
+                                            <button class="amount-btn minus-btn" type="button">-</button>
+                                            <input type="number" class="amount-input" value="0" min="0" max="10">
+                                            <button class="amount-btn plus-btn" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total (теперь под Amount) -->
+                        <div class="total-group">
+                            <div class="total-line">
+                                <span class="total-label">Total</span>
+                                <span class="total-amount">220€</span>
+                            </div>
+                            <button class="buy-button">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-image">
+        <img src="/Museum/museum/TICS.png" alt="Tickets" class="tics-image">
+    </div>
+</section>
         <section class="section light-section contacts-section" id="contacts">
-            <div class="container"></div>
-        </section>
-        <!-- Остальные секции -->
+            <div class="container">
+        <div class="contacts-container">
+            <!-- Левая часть - текст -->
+            <div class="contacts-content">
+                <h2 class="section-title contacts-title underline-title">CONTACTS</h2>
+                
+                <div class="contacts-text">
+                    <p class="contacts-paragraph">
+                        <strong>Palais Royal Musee du Louvre:</strong><br>
+                        address: 75001 Paris, France<br>
+                        phone: +33(0) 1 40 20 50 50 <br>
+                        mail: info@louvre.fr <br>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Правая часть - карта -->
+            <div class="contacts-map">
+                <img src="/Museum/museum/map.png" alt="Louvre Museum Location" class="map-image">
+            </div>
+        </div>
+    </div>
+</section>
     </main>
     
     <footer class="footer">
