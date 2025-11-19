@@ -1,0 +1,110 @@
+/* Секция Gallery */
+.gallery-section {
+    padding: 90px 0;
+    background-color: #000000;
+}
+
+.gallery-title {
+    font-family: 'Forum', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+/* Контейнер для галереи */
+.picture-container {
+    width: 100%;
+    height: 950px; /* Фиксированная высота как на макете */
+    overflow-y: hidden; /* Обрезаем лишние изображения */
+    margin: 0 auto;
+}
+
+/* Внутренний контейнер с изображениями */
+.picture-inner-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px; /* Отступы между изображениями */
+    align-items: start;
+}
+
+/* Изображения галереи */
+.gallery-image {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+/* Альтернативный вариант с columns (если нужен masonry эффект) */
+.picture-inner-container.columns {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.picture-inner-container.columns .gallery-image {
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .picture-inner-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .picture-inner-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+        gap: 15px;
+    }
+    
+    .picture-container {
+        height: 1200px; /* Увеличиваем высоту для 2 колонок */
+    }
+    
+    .gallery-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 60px 0;
+    }
+    
+    .picture-inner-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .picture-container {
+        height: 1000px;
+    }
+    
+    .gallery-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .picture-inner-container {
+        grid-template-columns: 1fr; /* 1 колонка на мобильных */
+        gap: 10px;
+    }
+    
+    .picture-container {
+        height: 800px;
+    }
+    
+    .gallery-title {
+        font-size: 36px;
+    }
+}
+
