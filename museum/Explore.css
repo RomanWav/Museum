@@ -7,16 +7,15 @@
 .explore-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* или center */
+    align-items: flex-start;
     gap: 60px;
     max-width: 1440px;
-    margin: 0 auto; /* центрирование */
+    margin: 0 auto; 
 }
 
-/* Блок с контентом */
 .explore-content {
     flex: 0 1 700px;
-    max-width: 700px; /* хорошо */
+    max-width: 700px;
     order: 1;
 }
 
@@ -31,10 +30,9 @@
     white-space: nowrap;
 }
 
-/* Текст секции */
 .explore-text {
     display: flex;
-    flex-direction: column; /* вертикальное расположение параграфов */
+    flex-direction: column; 
     gap: 40px;
 }
 
@@ -50,10 +48,9 @@
 
 .highlight-text {
     color: #CAAA7D;
-    font-weight: 500px;
+    font-weight: 500;
 }
 
-/* Блок с изображением */
 .explore-image {
     flex: 0 1 600px;
     display: flex;

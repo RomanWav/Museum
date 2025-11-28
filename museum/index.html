@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="карточки.css"/>
+    <link rel="stylesheet" href="Card.css"/>
     <link rel="stylesheet" href="Explore.css"/>
     <link rel="stylesheet" href="Video.css"/>
     <link rel="stylesheet" href="Tickets.css"/>
     <link rel="stylesheet" href="Contacts.css"/>
     <link rel="stylesheet" href="Gallery.css"/>
+    <link rel="stylesheet" href="footer.css"/>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
     <title>Museum</title>
 </head>
@@ -73,7 +74,7 @@
                     
                     <!-- Карточка 3 -->
                     <a href="/Museum/museum/tours/tour3.html" target="_blank" class="card">
-                        <img src="/Museum/museum/assets/img/visitings/Rectangle (1).jpg" alt="COLONNADE PERRAULT" class="card-image" width="350" height="200">
+                        <img src="/Museum/museum/assets/img/visitings/Rectangle(1).jpg" alt="COLONNADE PERRAULT" class="card-image" width="350" height="200">
                         <div class="card-content">
                             <h3 class="card-title">COLONNADE PERRAULT</h3>
                             <p class="card-text">Participate in creative workshops for all ages and skill levels.</p>
@@ -82,7 +83,7 @@
                     
                     <!-- Карточка 4 -->
                     <a href="/Museum/museum/tours/tour4.html" target="_blank" class="card">
-                        <img src="/Museum/museum/assets/img/visitings/Rectangle (2).jpg" alt="GREEK HALL" class="card-image" width="350" height="200">
+                        <img src="/Museum/museum/assets/img/visitings/Rectangle(2).jpg" alt="GREEK HALL" class="card-image" width="350" height="200">
                         <div class="card-content">
                             <h3 class="card-title">GREEK HALL</h3>
                             <p class="card-text">Discover temporary exhibitions featuring contemporary artists.</p>
@@ -91,7 +92,7 @@
                     
                     <!-- Карточка 5 -->
                     <a href="/Museum/museum/tours/tour5.html" target="_blank" class="card">
-                        <img src="/Museum/museum/assets/img/visitings/Rectangle (3).jpg" alt="MONA LISA" class="card-image" width="350" height="200">
+                        <img src="/Museum/museum/assets/img/visitings/Rectangle(3).jpg" alt="MONA LISA" class="card-image" width="350" height="200">
                         <div class="card-content">
                             <h3 class="card-title">MONA LISA</h3>
                             <p class="card-text">Fun and educational activities designed for families with children.</p>
@@ -100,7 +101,7 @@
                     
                     <!-- Карточка 6 -->
                     <a href="/Museum/museum/tours/tour6.html" target="_blank" class="card">
-                        <img src="/Museum/museum/assets/img/visitings/Rectangle (4).jpg" alt="NIGHT PALACE" class="card-image" width="350" height="200">
+                        <img src="/Museum/museum/assets/img/visitings/Rectangle(4).jpg" alt="NIGHT PALACE" class="card-image" width="350" height="200">
                         <div class="card-content">
                             <h3 class="card-title">NIGHT PALACE</h3>
                             <p class="card-text">Explore at your own pace with our comprehensive audio guides.</p>
@@ -138,7 +139,7 @@
     </div>
     </div>
         </section>
-        <section class="dark-section light-section video-section" id="video">
+        <section class="dark-section video-section" id="video">
             <div class="container">
         <h2 class="section-title video-title underline-title">VIDEO JOURNEY</h2>
         
@@ -204,7 +205,6 @@
     </div>
 </section>
         <section class="section light-section gallery-section" id="gallery"> 
-            <div class="container">
                 <div class="container">
         <h2 class="section-title gallery-title underline-title">GALLERY</h2>
         
@@ -229,7 +229,7 @@
             </div>
         </div>
     </div>
-        </section>
+    </section>
     <section class="section dark-section tickets-section" id="tickets">
     <div class="container">
         <h2 class="section-title tickets-title underline-title">BUY TICKETS</h2>
@@ -326,8 +326,8 @@
                     <p class="contacts-paragraph">
                         <strong>Palais Royal Musee du Louvre:</strong><br>
                         address: 75001 Paris, France<br>
-                        phone: +33(0) 1 40 20 50 50 <br>
-                        mail: info@louvre.fr <br>
+                        <a href="tel:+330140205050">+33(0) 1 40 20 50 50</a>
+                        <a href="mailto:info@louvre.fr">info@louvre.fr</a>
                     </p>
                 </div>
             </div>
@@ -342,7 +342,19 @@
     </main>
     
     <footer class="footer">
-        <div class="container"></div>
-    </footer>
+    <div class="container">
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li><a href="#visiting">Visiting</a></li>
+                <li><a href="#explore">Explore</a></li>
+            </ul>
+        </nav>
+        <ul class="social-list"> <!-- ← Третий список -->
+            <li><a href="#" aria-label="Facebook">FB</a></li>
+            <li><a href="#" aria-label="Twitter">TW</a></li>
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

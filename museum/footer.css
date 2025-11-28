@@ -1,0 +1,28 @@
+.social-list {
+display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: #000000;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* ← Круглая граница */
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-list a:hover {
+    background-color: #915757;
+    color: #c59696;
+}
