@@ -13,6 +13,7 @@
     gap: 60px;
     max-width: 1440px;
     margin: 0 auto; 
+    margin-bottom: 132px; /* Добавьте отступ снизу */
 }
 
 .explore-content {
@@ -30,50 +31,60 @@
     color: #ffffff;
     margin-bottom: 60px;
     white-space: nowrap;
-    margin-left: -10px; /* Сдвиг влево */
+    margin-left: -7px; /* Сдвиг влево */
     word-spacing: 5px; /* Расстояние между словами */
+    margin-top: 4px;
 }
 
 .explore-title.underline-title::after {
     left: -1px;
-    width: calc(90% + 21px); /* Только вправо */
+    width: calc(90% + 33px); /* Только вправо */
 }
 
 .explore-text {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    font-size: 22px;
-    margin-top: 107px; /* Добавьте отступ сверху */
-    margin-left: -12px; /* Сдвиньте влево к подчеркиванию */
+    font-size: 21px;
+    margin-top: 102px; /* Добавьте отступ сверху */
+    margin-left: -9px; /* Сдвиньте влево к подчеркиванию */
 }
 .explore-paragraph {
     font-family: 'Roboto', serif;
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #ffffff;
     margin: 0;
     letter-spacing: 1px;
     font-weight: 200;
+    max-width: 680px; /* Ограничьте ширину текста */
+    text-align: left;
+    vertical-align: top;
+}
+
+.explore-paragraph:nth-of-type(3) {
+    margin-top: -8px;
 }
 
 .highlight-text {
     color: #CAAA7D;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .explore-image {
-    flex: 0 1 600px;
+    flex: 0 1 auto; /* Гибкая ширина */
     display: flex;
     justify-content: center;
     align-items: center;
     order: 2;
+    min-width: 650px; /* Минимальная ширина */
 }
 
 .painting-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 85px;
+    margin-left: -73px;
+    transform: scale(1.1) translate(30px, -29px); /* Увеличить и сдвинуть */
 }
