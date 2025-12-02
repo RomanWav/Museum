@@ -3,51 +3,53 @@
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 10px;
+    column-gap: 60px;
     max-width: 1440px;
-    margin: 0 auto;
-    justify-content: space-between;
+    margin: 105px auto 0 auto; /* Добавьте margin-top */
+    justify-content: flex-start;
     align-items: stretch;
-    padding-left: 20px; /* Возвращаем отступы */
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
+    margin-left: 8px; /* Добавьте эту строку */
 }
 
 .card {
     display: block;
-    width: 420px;
-    border-radius: 0px;
+    width: 440px; /* Измените ширину карточки */
     overflow: hidden;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    margin-bottom: 53px;
 }
 
 .card-image {
     width: 100%;
-    height: 300px;
+    height: 285px; /* Фиксированная высота */
     object-fit: cover;
     display: block;
 }
 
 .card-content {
-    padding: 30px;
-    padding-left: 0;
+    padding-top: 25px; /* Уменьшите только верхний отступ */
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 0px;
     flex-grow: 1;
 }
 
 .card-title {
     font-family: 'Forum', serif;
     font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 300;
     color: #333333;
     position: relative;
     display: block;
-    margin-bottom: 10px;
-    padding-bottom: 15px;
+    margin-bottom: 16px;
+    padding-bottom: 11px;
     letter-spacing: 5px;
 }
 
@@ -56,7 +58,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80%;
+    width: 73%;
     height: 2px;
     background: #710707;
     transition: width 0.3s ease;
@@ -67,10 +69,11 @@
 }
 
 .card-text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #666666;
     margin: 0;
+    font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -100,9 +103,9 @@
 .underline-title::after {
     content: "";
     position: absolute;
-    bottom: -30px;
-    left: 20px; /* Начинается от левого края карточек */
-    width: calc(100% - 40px); /* Заканчивается у правого края карточек */
+    bottom: -29px;
+    left: 8px; /* Начинается от левого края карточек */
+    width: calc(100% - 1px); /* Заканчивается у правого края карточек */
     height: 3px;
     background-color: #710707;
 }
@@ -111,4 +114,23 @@
     padding-left: 0;
     padding-right: 0;
     position: relative;
+}
+
+.card-subtitle {
+    margin-top: -5px;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 100;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-text {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
 }
