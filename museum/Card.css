@@ -65,7 +65,7 @@
 }
 
 .card:hover .card-title::after {
-    width: 100%;
+    width: 110%;
 }
 
 .card-text {

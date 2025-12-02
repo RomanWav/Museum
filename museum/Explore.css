@@ -1,7 +1,9 @@
 /* Секция Explore */
 .explore-section {
     padding: 75px 0;
-    min-height: 200px;
+    min-height: 100px; /* Уменьшите минимальную высоту */
+    position: relative;
+    top: -39px; /* Поднимите всю секцию */
 }
 
 .explore-container {
@@ -21,25 +23,34 @@
 
 .explore-title {
     font-family: 'Forum', serif;
-    font-size: 80px;
-    font-weight: 400;
+    font-size: 81px;
+    font-weight: 300;
     line-height: 1.1;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color: #ffffff;
     margin-bottom: 60px;
     white-space: nowrap;
+    margin-left: -10px; /* Сдвиг влево */
+    word-spacing: 5px; /* Расстояние между словами */
+}
+
+.explore-title.underline-title::after {
+    left: -1px;
+    width: calc(90% + 21px); /* Только вправо */
 }
 
 .explore-text {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 40px;
+    font-size: 22px;
+    margin-top: 107px; /* Добавьте отступ сверху */
+    margin-left: -12px; /* Сдвиньте влево к подчеркиванию */
 }
-
 .explore-paragraph {
     font-family: 'Roboto', serif;
-    font-size: 22px;
-    line-height: 1.1;
+    font-size: 20px;
+    line-height: 1.6;
     color: #ffffff;
     margin: 0;
     letter-spacing: 1px;
