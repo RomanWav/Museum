@@ -2,6 +2,7 @@
 .gallery-section {
     padding: 90px 0;
     background-color: #000000;
+    margin-bottom: -50px; /* Поднимает следующую секцию */
 }
 
 .gallery-title {
@@ -18,21 +19,28 @@
 /* Контейнер для галереи */
 .picture-container {
     width: 100%;
-    height: auto; /* Уберите фиксированную высоту */
-    overflow: visible; /* Разрешить показ всего содержимого */
+    height: 1850px; /* Уменьшите высоту (если есть фиксированная) */
+    overflow: hidden;
     margin: 0 auto;
     position: relative;
 }
 
 /* Затемнение в конце секции */
+/* Затемнение в конце секции - начинается ПОЗЖЕ */
 .picture-container::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent, #000000);
+    height: 250px;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        transparent 30%, /* Добавлено - дольше прозрачно */
+        rgba(0, 0, 0, 0.3) 50%, /* Позже начинается затемнение */
+        rgba(0, 0, 0, 0.6) 70%,
+        rgba(0, 0, 0, 0.9) 90%,
+        #000000 100%);
     pointer-events: none;
     z-index: 2;
 }
@@ -44,16 +52,24 @@
 }
 
 .column-1,
-.column-2,
 .column-3 {
-    flex: 1; /* Равная ширина */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* 10px между картинками внутри колонки */
+    gap: 25px; /* 25px для первой и третьей колонки */
+    margin-top: 50px;
 }
 
 .gallery-image {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.column-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* 25px для второй колонки */
+    margin-top: -1px;
 }
