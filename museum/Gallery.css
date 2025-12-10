@@ -3,6 +3,12 @@
     padding: 90px 0;
     background-color: #000000;
     margin-bottom: -50px; /* Поднимает следующую секцию */
+    height: 2255px
+}
+
+.gallery-section .container {
+    max-width: 1500px; /* Попробуйте 1600, 1700, 1800px */
+    margin-left: 230px;
 }
 
 .gallery-title {
@@ -22,28 +28,25 @@
 /* Контейнер для галереи */
 .picture-container {
     width: 100%;
-    height: 1850px; /* Уменьшите высоту (если есть фиксированная) */
+    height: 1980px; /* Уменьшите высоту (если есть фиксированная) */
     overflow: hidden;
     margin: 0 auto;
     position: relative;
+    width: calc(100% + 0px); /* Расширяет контейнер картинок */
 }
 
 /* Затемнение в конце секции */
-/* Затемнение в конце секции - начинается ПОЗЖЕ */
 .picture-container::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 250px;
-    background: linear-gradient(to bottom, 
-        transparent 0%,
-        transparent 30%, /* Добавлено - дольше прозрачно */
-        rgba(0, 0, 0, 0.3) 50%, /* Позже начинается затемнение */
-        rgba(0, 0, 0, 0.6) 70%,
-        rgba(0, 0, 0, 0.9) 90%,
-        #000000 100%);
+    height: 300px; /* Увеличил высоту затемнения */
+    background: linear-gradient(to top, 
+        rgb(0, 0, 0) 5%,
+        rgba(0, 0, 0, 0.2) 80%,
+        transparent 100%);
     pointer-events: none;
     z-index: 2;
 }
@@ -51,7 +54,9 @@
 /* Внутренний контейнер с изображениями */
 .picture-inner-container {
     display: flex;
-    gap: 40px; /* Расстояние между колонками */
+    gap: 6px;
+    margin-top: 15px; /* Опустить на 20px */
+    margin-left: -10px; /* Сдвинуть левее на 15px */
 }
 
 .column-1,
@@ -63,16 +68,35 @@
     margin-top: 50px;
 }
 
-.gallery-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .column-2 {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 25px; /* 25px для второй колонки */
     margin-top: -1px;
+}
+
+.gallery-image {
+    width: 456px; /* Фиксированная ширина для всех */
+    height: auto; /* Авто-высота для сохранения пропорций */
+    display: block;
+}
+
+/* СРЕДНИЕ картинки (456×456px) */
+.gallery-image[src*="galery1.jpg"],
+.gallery-image[src*="galery4.jpg"],
+.gallery-image[src*="galery10.jpg"],
+.gallery-image[src*="galery15.jpg"], {
+    height: 456px; /* Фиксированная высота для средних */
+    object-fit: cover; /* Обрезает лишнее чтобы заполнить квадрат */
+}
+
+/* ДЛИННЫЕ картинки (456×570px) */
+.gallery-image[src*="galery2.jpg"],
+.gallery-image[src*="galery3.jpg"],
+.gallery-image[src*="galery7.jpg"],
+.gallery-image[src*="galery8.jpg"],
+.gallery-image[src*="galery9.jpg"] {
+    height: 570px; /* Фиксированная высота для длинных */
+    object-fit: cover;
 }
