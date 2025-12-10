@@ -3,11 +3,11 @@
     padding: 90px 0;
     background-color: #000000;
     margin-bottom: -50px; /* Поднимает следующую секцию */
-    height: 2255px
+    height: 2255px;
 }
 
 .gallery-section .container {
-    max-width: 1500px; /* Попробуйте 1600, 1700, 1800px */
+    max-width: 1500px;
     margin-left: 230px;
 }
 
@@ -20,43 +20,41 @@
     color: #ffffff;
     margin-bottom: 65px;
     text-align: left;
-    margin-left: -11px; /* Сдвиг влево */
-    word-spacing: 0.5px; /* Расстояние между словами */
+    margin-left: -11px;
+    word-spacing: 0.5px;
     margin-top: -10px;
 }
 
-/* Контейнер для галереи */
 .picture-container {
     width: 100%;
-    height: 1980px; /* Уменьшите высоту (если есть фиксированная) */
+    height: 1980px;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
-    width: calc(100% + 0px); /* Расширяет контейнер картинок */
 }
 
-/* Затемнение в конце секции */
 .picture-container::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px; /* Увеличил высоту затемнения */
+    height: 300px;
     background: linear-gradient(to top, 
-        rgb(0, 0, 0) 5%,
-        rgba(0, 0, 0, 0.2) 80%,
-        transparent 100%);
+        rgb(0, 0, 0) 0%,          
+        rgba(0, 0, 0, 0.8) 20%,    
+        rgba(0, 0, 0, 0.5) 40%,    
+        rgba(0, 0, 0, 0.2) 60%,    
+        transparent 100%           
+    );
     pointer-events: none;
     z-index: 2;
 }
-
-/* Внутренний контейнер с изображениями */
 .picture-inner-container {
     display: flex;
     gap: 6px;
-    margin-top: 15px; /* Опустить на 20px */
-    margin-left: -10px; /* Сдвинуть левее на 15px */
+    margin-top: 15px;
+    margin-left: -10px;
 }
 
 .column-1,
@@ -64,7 +62,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* 25px для первой и третьей колонки */
+    gap: 25px;
     margin-top: 50px;
 }
 
@@ -72,23 +70,23 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* 25px для второй колонки */
+    gap: 25px;
     margin-top: -1px;
 }
 
 .gallery-image {
-    width: 456px; /* Фиксированная ширина для всех */
-    height: auto; /* Авто-высота для сохранения пропорций */
+    width: 456px;
+    height: auto;
     display: block;
 }
 
-/* СРЕДНИЕ картинки (456×456px) */
+/* СРЕДНИЕ картинки (456×456px)*/
 .gallery-image[src*="galery1.jpg"],
 .gallery-image[src*="galery4.jpg"],
 .gallery-image[src*="galery10.jpg"],
-.gallery-image[src*="galery15.jpg"], {
-    height: 456px; /* Фиксированная высота для средних */
-    object-fit: cover; /* Обрезает лишнее чтобы заполнить квадрат */
+.gallery-image[src*="galery15.jpg"] {
+    height: 456px;
+    object-fit: cover;
 }
 
 /* ДЛИННЫЕ картинки (456×570px) */
@@ -97,6 +95,6 @@
 .gallery-image[src*="galery7.jpg"],
 .gallery-image[src*="galery8.jpg"],
 .gallery-image[src*="galery9.jpg"] {
-    height: 570px; /* Фиксированная высота для длинных */
+    height: 570px;
     object-fit: cover;
 }
