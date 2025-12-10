@@ -8,12 +8,15 @@
 .gallery-title {
     font-family: 'Forum', serif;
     font-size: 80px;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: 2px;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: 5px;
     color: #ffffff;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
     text-align: left;
+    margin-left: -11px; /* Сдвиг влево */
+    word-spacing: 0.5px; /* Расстояние между словами */
+    margin-top: -10px;
 }
 
 /* Контейнер для галереи */
