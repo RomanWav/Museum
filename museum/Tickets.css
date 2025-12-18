@@ -2,6 +2,7 @@
 .tickets-section {
     padding: 90px 0;
     background-color: #ffffff;
+    margin-bottom: -50px
 }
 
 .tickets-title {
@@ -64,6 +65,7 @@
     display: flex;
     flex-direction: column;
 }
+
 
 /* Заголовок Ticket Type - возвращаем оригинальные стили */
 .compact-group:first-child .form-title {
@@ -170,14 +172,19 @@
 
 .compact-group:nth-child(2) .amount-label {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
+    margin-left: 2px;
+    margin-top: 13px;
     color: #000000;
     font-weight: 300;
-    margin-bottom: 5px;
-    text-align: right;
+    margin-bottom: 3px; /* Увеличиваем с 5px до 10px */
+    text-align: left; /* Меняем с right на left */
+    width: 100%; /* Занимает всю ширину */
+    display: block;
 }
 
-.compact-group:nth-child(2) .amount-controls-wrapper {
+/* УВЕЛИЧИВАЕМ ПРЯМОУГОЛЬНИКИ С КНОПКАМИ +/- */
+.amount-controls-wrapper {
     display: flex;
     align-items: center;
     border: 3px solid #000000;
@@ -187,6 +194,87 @@
     gap: 0; 
     max-width: fit-content;
     margin-left: auto; /* Прижимаем к правому краю */
+    /* Увеличиваем размер */
+    height: 50px; /* Увеличиваем высоту */
+    min-width: 140px; /* Минимальная ширина */
+    margin-top: 2px; /* Опускаем ниже на 10px */
+}
+
+.amount-controls {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.amount-btn:first-child::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #ffffff;
+    margin: 0 8px;
+}
+
+.amount-input::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: #ffffff;
+    margin: 0 8px;
+}
+
+/* УВЕЛИЧИВАЕМ КНОПКИ +/- */
+.amount-btn {
+    width: 48px;
+    height: 45px;
+    background: transparent;
+    color: #000000;
+    font-size: 36px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* МИНУС - только удлиняем */
+.minus-btn {
+    letter-spacing: -10px; /* Удлиняем минус */
+    padding-right: -4px;
+}
+
+/* ПЛЮС - только сдвигаем левее */
+.plus-btn {
+    letter-spacing: -11px; /* Удлиняем минус */
+    padding-right: 3px;
+    padding-top: -4px;
+}
+
+.amount-btn:hover {
+    background: #ffffff;
+}
+
+/* УВЕЛИЧИВАЕМ ПОЛЕ ВВОДА */
+.amount-input {
+    width: 50px; /* Увеличиваем с 40px до 50px */
+    height: 50px; /* Увеличиваем с 35px до 45px */
+    background: transparent;
+    color: #000000;
+    text-align: center;
+    font-size: 20px; /* Увеличиваем шрифт с 16px до 20px */
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Общие стили для радио-кнопок (остаются без изменений) */
@@ -215,7 +303,7 @@
     transform: translate(-50%, -50%);
     width: 7px;
     height: 7px;
-    background: #000;
+    background: #000000;
     border-radius: 50%;
 }
 
@@ -227,106 +315,48 @@
     color: #1b55d1;
 }
 
-.amount-controls {
-    display: flex;
-    align-items: center;
-    gap: 0;
-}
-
-.amount-btn:first-child::after {
-    content: "";
-    width: 1px;
-    height: 20px;
-    background: #ffffff;
-    margin: 0 8px;
-}
-
-.amount-input::after {
-    content: "";
-    width: 1px;
-    height: 20px;
-    background: #ffffff;
-    margin: 0 8px;
-}
-
-.amount-btn {
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    color: #000000;
-    font-size: 30px;
-    cursor: pointer;
-    border: none;
-    border-radius: 0;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-.amount-btn:hover {
-    background: #f5f5f5;
-}
-
-.amount-input {
-    width: 40px;
-    height: 35px;
-    background: transparent;
-    color: #000000;
-    text-align: center;
-    font-size: 16px;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid #ffffff;
-    -moz-appearance: textfield;
-}
-
-.amount-input::-webkit-outer-spin-button,
-.amount-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 .total-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 56px;
+    margin-top: 8px;
+    gap: 14px;
 }
 
 .total-label {
-    font-family: 'Forum', serif;
-    font-size: 24px;
+    font-family: 'Roboto', serif;
+    font-size: 29px;
     color: #000000;
-    font-weight: 400;
+    font-weight: 700;
+    position: relative;
+    left: 3px; /* Сдвигаем левее на 15px */
+    letter-spacing: 1px;
 }
 
 .total-amount {
     font-family: 'Roboto', sans-serif;
-    font-size: 28px;
+    font-size: 29px;
     color: #000000;
-    font-weight: 500;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .buy-button {
-    width: 100%;
-    padding: 15px;
+    width: 115%;
+    padding: 11px 10px;
     background: #000000;
     color: #ffffff;
     border: none;
-    font-family: 'Forum', serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-family: 'Roboto', serif;
+    font-size: 22px;
+    font-weight: 300;
     letter-spacing: 2px;
-    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 4px;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-left: -22.5px;
 }
 
 .buy-button:hover {
@@ -357,7 +387,7 @@
 .full-width-image {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    margin-top: 80px;
+    margin-top: 155px;
     overflow: hidden;
 }
 
@@ -365,4 +395,24 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Поднимаем только Basic 18+ */
+.amount-item:first-child {
+    margin-top: -16px; /* Поднимаем весь блок Basic */
+}
+
+.amount-item:first-child .amount-label {
+    margin-top: 0px; /* Сбрасываем ваш margin-top: 13px */
+    margin-bottom: 10px; /* Отступ до прямоугольника */
+}
+
+/* Senior 65+ оставляем как есть */
+.amount-item:last-child {
+    margin-top: 10px; /* Не поднимаем */
+}
+
+/* Senior оставляем без изменений */
+.amount-item:last-child .amount-controls-wrapper {
+    margin-top: 11px; /* Оставляем ваш отступ */
 }
