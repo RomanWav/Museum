@@ -11,7 +11,7 @@
     line-height: 1.0;
     letter-spacing: 5px;
     color: #9D8665;
-    margin-bottom: 65px;
+    margin-bottom: 93px;
     text-align: left;
     margin-left: -10px;
     word-spacing: 0.5px;
@@ -40,52 +40,156 @@
     max-width: none;
     margin: 0;
     position: relative;
+    
 }
 
 /* Форма */
 .tickets-form {
     flex: 1;
-    max-width: 500px;
+    max-width: 500px; /* Возвращаем оригинальную ширину */
     margin-left: 230px; /* Выравниваем с заголовком */
+    margin-top: 30px;
 }
 
 .form-row {
     display: flex;
-    gap: 30px;
+    gap: 100px; /* Увеличиваем расстояние между колонками для выравнивания */
     margin-bottom: 0;
 }
 
-.compact-group {
+/* ЛЕВАЯ КОЛОНКА (Ticket Type) - возвращаем как было */
+.compact-group:first-child {
     flex: 1;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
 }
 
-.form-title {
-    font-family: 'Forum', serif;
-    font-size: 24px;
+/* Заголовок Ticket Type - возвращаем оригинальные стили */
+.compact-group:first-child .form-title {
+    font-family: 'Roboto', serif;
+    font-size: 27px;
     color: #080500;
-    margin-bottom: 20px;
-    font-weight: 400;
+    margin-bottom: 45px; /* Увеличиваем отступ снизу для большего расстояния до радио-кнопок */
+    font-weight: 700;
     letter-spacing: 1px;
+    margin-top: -30px; /* Поднимаем выше */
+    margin-left: -135px; /* Сдвигаем левее */
+    word-spacing: -3px;
 }
 
-.radio-group {
+/* Radio-group для Ticket Type - возвращаем оригинальные стили */
+.compact-group:first-child .radio-group {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
+    margin-left: -134px; /* Сдвигаем левее */
+    margin-top: -5px;
 }
 
-.radio-label {
+.compact-group:first-child .radio-label {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 22px;
     cursor: pointer;
     padding: 10px 0;
     transition: all 0.3s ease;
 }
 
+/* Текст радио-кнопок Ticket Type - возвращаем оригинальные стили */
+.compact-group:first-child .radio-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 300; /* Полужирный вместо Light (300) */
+    letter-spacing: -0px; /* Немного больше расстояния между буквами */
+}
+
+/* ПРАВАЯ КОЛОНКА (Amount и Basic) - выравниваем по правому краю */
+.compact-group:nth-child(2) {
+    flex: 1;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    transform: translateX(26px); /* Сдвигаем всю колонку влево на 20px */
+}
+
+/* Заголовок Basic в правой колонке */
+.compact-group:nth-child(2) .form-title {
+    font-family: 'Roboto', serif;
+    font-size: 27px;
+    color: #080500;
+    margin-bottom: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: -30px;
+    margin-left: 0; /* Убираем отрицательный отступ */
+    margin-right: 0; /* Прижимаем к правому краю */
+    word-spacing: -3px;
+    align-self: flex-end; /* Выравниваем по правому краю */
+}
+
+/* Radio-group для Basic - выравниваем по правому краю */
+.compact-group:nth-child(2) .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 0; /* Убираем отрицательный отступ */
+    margin-top: -5px;
+    align-items: flex-end; /* Выравниваем по правому краю */
+}
+
+.compact-group:nth-child(2) .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    flex-direction: row-reverse; /* Кружок справа, текст слева */
+}
+
+.compact-group:nth-child(2) .radio-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 0px;
+    margin-right: 10px; /* Отступ от кружка */
+    text-align: right;
+}
+
+/* Amount в правой колонке */
+.compact-group:nth-child(2) .amount-group {
+    margin-bottom: 40px;
+    align-self: flex-end; /* Выравниваем по правому краю */
+    text-align: right;
+}
+
+.compact-group:nth-child(2) .amount-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 300;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.compact-group:nth-child(2) .amount-controls-wrapper {
+    display: flex;
+    align-items: center;
+    border: 3px solid #000000;
+    border-radius: 1px;
+    padding: 0;
+    background: #ffffff;
+    gap: 0; 
+    max-width: fit-content;
+    margin-left: auto; /* Прижимаем к правому краю */
+}
+
+/* Общие стили для радио-кнопок (остаются без изменений) */
 .radio-input {
     display: none;
 }
@@ -109,52 +213,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     background: #000;
     border-radius: 50%;
 }
 
-.radio-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #000000;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+.radio-label:nth-child(3) {
+    margin-top: -2px;
 }
 
 .radio-label:hover .radio-text {
     color: #1b55d1;
-}
-
-/* Amount controls */
-.amount-group {
-    margin-bottom: 40px;
-}
-
-.amount-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.amount-label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #000000;
-    font-weight: 300;
-    margin-bottom: 5px;
-}
-
-.amount-controls-wrapper {
-    display: flex;
-    align-items: center;
-    border: 3px solid #000000;
-    border-radius: 1px;
-    padding: 0;
-    background: #ffffff;
-    gap: 0; 
-    max-width: fit-content; 
 }
 
 .amount-controls {
@@ -222,7 +292,6 @@
     margin: 0;
 }
 
-
 .total-line {
     display: flex;
     justify-content: space-between;
@@ -261,24 +330,28 @@
 }
 
 .buy-button:hover {
-    background: #f70cff;
+    background: #a784a8;
     transform: translateY(-2px);
 }
 
-/* Изображение */
+/* Изображение - ВОЗВРАЩАЕМ ОРИГИНАЛЬНЫЕ РАЗМЕРЫ */
 .tickets-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 0; /* Убираем отступ сверху */
+    position: relative;
+    left: 15px; /* Сдвигаем влево, чтобы начиналось от края заголовка */
 }
 
 .tickets-poster {
-    width: 100%;
-    max-width: 650px;
+    width: 110%; /* Увеличиваем ширину на 10% */
+    max-width: none; /* Убираем ограничение по максимальной ширине */
     height: auto;
-    border-radius: 1px;
     margin-left: 0;
+    transform: scale(1.11); /* Альтернатива: масштабирование */
+    transform-origin: left top; /* Масштабирование от левого верхнего угла */
 }
 
 .full-width-image {
