@@ -13,9 +13,24 @@
     color: #9D8665;
     margin-bottom: 65px;
     text-align: left;
-    margin-left: -11px;
+    margin-left: -10px;
     word-spacing: 0.5px;
-    margin-top: -10px;
+    margin-top: -45px;
+    margin-left: -15px;
+    /* Добавляем подчеркивание */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px; /* Отступ для линии */
+}
+
+.tickets-title::after {
+    content: '';
+    position: absolute;
+    left: -0px; /* Сдвиг влево */
+    bottom: -18px; /* Опускаем ниже */
+    height: 3px; /* Толщина линии */
+    background-color: #710707; /* Цвет линии */
+    width: 75vw
 }
 
 .tickets-container {
